@@ -5,6 +5,7 @@ const root = document.getElementById('root');
 const width = document.getElementById('width');
 const cols = document.getElementById('cols');
 const regenerate = document.getElementById('regenerate');
+const reset = document.getElementById('reset');
 
 function generate() {
     root.innerHTML = '';
@@ -48,6 +49,14 @@ cols.addEventListener('input', () => {
 });
 
 regenerate.addEventListener('click', generate);
+
+reset.addEventListener('click', () => {
+    width.value = main.clientWidth / 10;
+    cols.value = 5;
+    window.localStorage.clear();
+    updatePadding();
+    generate();
+});
 
 width.max = main.clientWidth;
 width.min = 0;
