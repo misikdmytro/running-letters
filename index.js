@@ -46,9 +46,9 @@ cols.addEventListener('input', () => {
     generate();
 });
 
-width.value = window.localStorage.getItem('width') || main.clientWidth / 10;
 width.max = main.clientWidth;
 width.min = 0;
+width.value = window.localStorage.getItem('width') || main.clientWidth / 10;
 
 cols.value = window.localStorage.getItem('cols') || 5;
 
