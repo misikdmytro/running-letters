@@ -4,6 +4,7 @@ const main = document.getElementById('main');
 const root = document.getElementById('root');
 const width = document.getElementById('width');
 const cols = document.getElementById('cols');
+const regenerate = document.getElementById('regenerate');
 
 function generate() {
     root.innerHTML = '';
@@ -45,6 +46,8 @@ cols.addEventListener('input', () => {
     window.localStorage.setItem('cols', cols.value);
     generate();
 });
+
+regenerate.addEventListener('click', generate);
 
 width.max = main.clientWidth;
 width.min = 0;

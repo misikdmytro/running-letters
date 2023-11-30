@@ -6,11 +6,8 @@
         <title>Document</title>
     </head>
     <body style="font-size: 1.2em">
-        <div id="main" class="container">
-            <div
-                id="root"
-                class="text-center"
-            ></div>
+        <div id="main" class="container text-center">
+            <div id="root"></div>
 
             <input
                 type="range"
@@ -26,8 +23,11 @@
                 min="3"
                 max="15"
                 step="2"
-                style="margin-top: 2em"
             />
+
+            <button id="regenerate" class="btn btn-primary">
+                Regenerate
+            </button>
         </div>
 
         <script src="index.js"></script>
